@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
-import { ProductorComponent } from './productor/productor.component';
-
 const routes: Routes = [
   {
     path: '',
-    component: ProductorComponent,
+    loadChildren: () => import('./productor/productor.module').then(m => m.ProductorModule)
   },
 ];
 
