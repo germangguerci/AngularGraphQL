@@ -1,0 +1,12 @@
+<form [formGroup]="productorForm" (ngSubmit)="onSubmit()">
+  <label for="nombre">Nombre </label>
+  <input id="nombre" type="text" formControlName="nombre" />
+
+  <label for="localidad">Localidad </label>
+  <input id="localidad" type="text" formControlName="localidad" />
+
+  <label for="descripcionBreve">Descripción breve </label>
+  <input id="descripcionBreve" type="text" formControlName="descripcionBreve" />
+
+  <button type="submit" [disabled]="!productorForm.valid">Crear</button>
+</form>
